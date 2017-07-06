@@ -31,7 +31,7 @@ def one_away(str_input):
 
 class Test(unittest.TestCase):
     dataT=[(['bale','pale']),(['bale','bal']),(['bale','bale%'])]
-    dataF=[(['bale','kali']),(['apple','app']),(['peach','ba  $$'])]
+    dataF=[(['bale','kali']),(['apple','app']),(['peach','peaches']),(['pable', 'pkle'])]
 
     def test_one_away(self):
         # true check
