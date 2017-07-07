@@ -5,3 +5,6 @@ class Node:
 
     def __str__(self):
         return str(self.data)
+
+    def append(self,node_y):
+        self.next=node_y
