@@ -13,13 +13,13 @@ def return_kth_to_last(head,k):
         pointer=pointer.next
     ele_list.append(pointer.data)
 
-    return ' '.join(ele_list)
+    return '->'.join(ele_list)
 
 def main():
     linked_list=LinkedList('a')
     for i in range(1,26):
         linked_list.append(chr(ord('a')+i))
-    print return_kth_to_last(linked_list.head,26)
+    print return_kth_to_last(linked_list.head,20)
 
 if __name__=='__main__':
     main()

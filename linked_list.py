@@ -16,8 +16,8 @@ class LinkedList:
         self.head=Node(data)
         self.head.next=None
 
-        ## set current pointer position
-        self.current=self.head
+        ## set tail pointer position
+        self.tail=self.head
 
         ## set counter
         self.counter=1
@@ -26,14 +26,19 @@ class LinkedList:
         temp_list=[] ## list of nodes
         pointer=self.head
         while pointer.next!=None:
-            temp_list.append(pointer.data)
+            temp_list.append(str(pointer.data))
             pointer=pointer.next
-        temp_list.append(pointer.data)
+        temp_list.append(str(pointer.data))
 
-        return ','.join(temp_list)
+        return '->'.join(temp_list)
 
 
     def append(self,data):
-        self.current.next=Node(data)
-        self.current=self.current.next
-        self.counter+=1
+        if self.head.data==None:
+            self.head.data=data
+        else:
+            self.tail.next=Node(data)
+            self.tail=self.tail.next
+            self.counter+=1
+
+        return self.tail
