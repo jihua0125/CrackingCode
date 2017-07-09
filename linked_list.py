@@ -17,18 +17,18 @@ class LinkedList:
         self.head.next=None
 
         ## set current pointer position
-        self.current=head
+        self.current=self.head
 
         ## set counter
         self.counter=1
 
     def __str__(self):
         temp_list=[] ## list of nodes
-        pointer=head
+        pointer=self.head
         while pointer.next!=None:
             temp_list.append(pointer.data)
             pointer=pointer.next
-        temp_list.append(pointer)
+        temp_list.append(pointer.data)
 
         return ','.join(temp_list)
 
@@ -37,5 +37,3 @@ class LinkedList:
         self.current.next=Node(data)
         self.current=self.current.next
         self.counter+=1
-
-    def
