@@ -37,3 +37,5 @@ class LinkedList:
         self.current.next=Node(data)
         self.current=self.current.next
         self.counter+=1
+
+    def
