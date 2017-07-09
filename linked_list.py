@@ -42,3 +42,7 @@ class LinkedList:
             self.counter+=1
 
         return self.tail
+
+    def add_multiple(self, values):
+        for v in values:
+            self.append(v)
